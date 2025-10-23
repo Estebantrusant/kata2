@@ -1,4 +1,4 @@
 package Software.ulpgc.kata2;
 
-public class TsvMovieParser {
+public class TsvMovieParser implements MovieParser {
 }
