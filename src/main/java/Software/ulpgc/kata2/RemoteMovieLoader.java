@@ -31,12 +31,19 @@ public class RemoteMovieLoader implements MovieLoader {
         }
     }
 
-    private List<Movie> loadAllFrom(InputStream is) {
+    private List<Movie> loadAllFrom(InputStream is) throws IOException {
         return loadFrom(new BufferedReader(new InputStreamReader(is)));
     }
 
-    private List<Movie> loadFrom(BufferedReader reader) {
+    private List<Movie> loadFrom(BufferedReader reader) throws IOException {
         List<Movie> movies = new ArrayList<>();
-        new TsvMovieParser();
+        TsvMovieParser parser = new TsvMovieParser();
+        reader.readLine();
+        while (true) {
+            String line = reader.readLine();
+            if (line == null) {break;}
+            movies.add(parser.from(line));
+        }
+        return movies;
     }
 }
