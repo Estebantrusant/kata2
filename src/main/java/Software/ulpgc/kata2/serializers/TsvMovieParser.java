@@ -1,4 +1,6 @@
-package Software.ulpgc.kata2;
+package Software.ulpgc.kata2.serializers;
+
+import Software.ulpgc.kata2.model.Movie;
 
 public class TsvMovieParser implements MovieParser {
     @Override

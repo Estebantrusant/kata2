@@ -1,5 +1,8 @@
 package Software.ulpgc.kata2;
 
+import Software.ulpgc.kata2.io.RemoteMovieLoader;
+import Software.ulpgc.kata2.model.Movie;
+
 import java.util.List;
 
 public class Main {

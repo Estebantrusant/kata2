@@ -1,10 +1,12 @@
-package Software.ulpgc.kata2;
+package Software.ulpgc.kata2.io;
+
+import Software.ulpgc.kata2.model.Movie;
+import Software.ulpgc.kata2.serializers.TsvMovieParser;
 
 import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.zip.GZIPInputStream;
 
