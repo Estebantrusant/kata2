@@ -7,7 +7,7 @@ public class Main {
         RemoteMovieLoader remoteMovieLoader = new RemoteMovieLoader();
         List<Movie> movies = remoteMovieLoader.loadAll();
         for (Movie movie : movies) {
-            System.out.println(movie);
+            System.out.println(movie.tittle());
         }
     }
 }
